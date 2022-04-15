@@ -4,11 +4,15 @@
     {
         public Ej6()
         {
-
+            List<string> palabras = new() { "estudiar", "caminar", "dia" };
+            IList<string> palabras2 = ReemplazarIa(palabras);
+            foreach (string palabra in palabras2)
+                Console.WriteLine(palabra);
         }
         public static IList<string> ReemplazarIa(List<string> palabras)
         {
-            throw new NotImplementedException();
+            IList<string> result = palabras.Select(word=>word.Replace("ia", "*")).ToList();
+            return result;
         }
     }
 }
