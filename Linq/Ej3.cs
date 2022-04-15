@@ -4,12 +4,16 @@
     {
         public Ej3()
         {
-            List<string> list = new List<string>();
-            list.Add("computadora");
-            list.Add("usb");
 
-            List<string>? listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            var palabras = new List<string>() { "usb", "computadora", "mouse", "mic", "teclado", "buscador", "balcon" };
 
+            var specificList = BuscarPalabrasPorLetras(palabras);
+
+
+            foreach (var item in specificList)
+            {
+                Console.WriteLine(item);
+            }
         }
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
