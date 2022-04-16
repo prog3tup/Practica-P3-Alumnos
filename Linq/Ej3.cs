@@ -1,23 +1,35 @@
-﻿namespace PracticaLinq
+﻿
+//3) Escriba una consulta que devuelva las palabras que empiezan por la letra "b" y terminan con la letra "r".
+//Ejemplo: "ventilador", "reloj", "buscador" → "buscador"
+
+
+namespace PracticaLinq
 {
     public class Ej3
     {
         public Ej3()
         {
             List<string> list = new List<string>();
-            list.Add("computadora");
-            list.Add("usb");
+            list.Add("ventilador");
+            list.Add("reloj");
+            list.Add("buscador");
+            list.Add("bdaras");
 
-            List<string>? listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            // var listaFiltrada = list.Where(el => el.StartsWith('b'));
+            // listaFiltrada = listaFiltrada.Where(el => el.EndsWith('r'));
 
-            foreach (var item in listaNueva)
+            var listaFiltrada = BuscarPalabrasPorLetras(list);
+            foreach (var el in listaFiltrada)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(el);
             }
+
         }
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
-            throw new NotImplementedException();
+            palabras = palabras.Where(el => el.StartsWith('b')).ToList();
+            palabras = palabras.Where(el => el.EndsWith('r')).ToList();
+            return palabras;
         }
     }
 }
