@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-            Ej2 ej = new();
+            Ej7 ej = new();
         }
     }
 }

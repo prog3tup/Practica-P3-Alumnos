@@ -9,7 +9,7 @@ namespace PracticaLinq
         public Ej1 ()
 	    {
             List<int> enteros = new List<int> ();
-            enteros.Add (67);
+            enteros.Add(67);
             enteros.Add(92);
             enteros.Add(153);
             enteros.Add(15);
