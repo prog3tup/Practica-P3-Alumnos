@@ -8,7 +8,13 @@
         }
         public static IList<string> ReemplazarIa(List<string> palabras)
         {
-            throw new NotImplementedException();
+            IList<string> cadenasReemplazadas = new List<string>();
+            foreach (string palabra in palabras)
+            {
+                cadenasReemplazadas.Add(palabra.Replace("ia", ""));
+            }
+            Console.WriteLine(cadenasReemplazadas.ToArray());
+            return cadenasReemplazadas;
         }
     }
 }

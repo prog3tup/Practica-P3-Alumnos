@@ -8,7 +8,14 @@
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            throw new NotImplementedException();
+            List<int> biggestFiveDescendent = new List<int>();
+            Array.Sort(numeros);
+            Array.Reverse(numeros);
+            for (int i = 0; i < 5; i++)
+            {
+                biggestFiveDescendent[i] = numeros[i];
+            }
+            return biggestFiveDescendent;
         }
     }
 }

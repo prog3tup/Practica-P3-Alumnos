@@ -12,11 +12,20 @@
             {
                 Console.WriteLine(pal);
             }       
-        }    
-        
+        }
+
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            throw new NotImplementedException();
+            IList<string> capitales = new List<string>();
+            IList<string> palabras = cadena.Split(" ");
+            foreach (string palabra in palabras)
+            {
+                if (!palabra.Any(c => char.IsLower(c)))
+                {
+                    capitales.Add(palabra);
+                }
+            }
+            return capitales;
         }
     }
 }
