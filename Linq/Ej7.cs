@@ -16,16 +16,7 @@
 
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            IList<string> capitales = new List<string>();
-            IList<string> palabras = cadena.Split(" ");
-            foreach (string palabra in palabras)
-            {
-                if (!palabra.Any(c => char.IsLower(c)))
-                {
-                    capitales.Add(palabra);
-                }
-            }
-            return capitales;
+            return cadena.Split(" ").Where(palabra => String.Equals(palabra, palabra.ToUpper(), StringComparison.Ordinal)).ToList();
         }
     }
 }

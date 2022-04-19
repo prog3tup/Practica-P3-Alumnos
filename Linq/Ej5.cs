@@ -9,15 +9,8 @@
 
         public static List<string> CalcularCuadrados(int[] numeros)
         {
-            List <string> NumerosYCuadrados = new List <string>();
-            foreach (int numero in numeros)
-            {
-                if (Math.Pow(numero, 2) > 20)
-                {
-                    NumerosYCuadrados.Add($"{numero} - {Math.Pow(numero, 2)}");
-                }
-            }
-            return NumerosYCuadrados;
+            numeros = numeros.Where(numero => Math.Pow(numero, 2) > 20).ToArray();
+            return numeros.Select(numero => $"{numero} - {Math.Pow(numero, 2)}").ToList();
         }
     }
 }
