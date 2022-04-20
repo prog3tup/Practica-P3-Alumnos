@@ -20,7 +20,10 @@ namespace PracticaLinq
 
             foreach (var entero in resultado)
             {
+                var entero = enteros.Select(x => x > 30 && x < 100){
                 Console.WriteLine(entero);
+                     
+                }
             }
         }
 

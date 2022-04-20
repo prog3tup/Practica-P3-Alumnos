@@ -18,7 +18,10 @@ namespace PracticaLinq
 
             foreach (var item in listaNueva)
             {
+                item = list.Where(word => word.Length >= 5).Select(word => word.ToUpper()).ToList(){ 
                 Console.WriteLine(item);
+                    
+                 }
             }
         }
     }
