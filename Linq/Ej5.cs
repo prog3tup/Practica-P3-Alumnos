@@ -9,7 +9,15 @@
 
         public static List<string> CalcularCuadrados(int[] numeros)
         {
-            throw new NotImplementedException();
+            List<string> newList = new List<string>();
+            foreach (int num in numeros)
+            {
+                if (Math.Pow(num, 2) > 20)
+                {
+                    newList.Add($"{num} - {Math.Pow(num, 2)}");
+                }
+            }
+            return newList;
         }
     }
 }
