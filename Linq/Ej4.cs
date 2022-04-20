@@ -5,6 +5,7 @@ namespace PracticaLinq
 {
     public class Ej4
     {
+
         public Ej4()
         {
             List<int> numList = new List<int>();
@@ -16,18 +17,20 @@ namespace PracticaLinq
             numList.Add(21);
             numList.Add(7);
             numList.Add(86);
-               
             
+            var numList2 = numList.OrderByDescending(x => x).Take(5).ToList();
+
+          foreach (int num in numList2)
+            {
+                Console.WriteLine(num);
+            }
+
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            var numList2 = numList.OrderByDescending(x => x).ToList();
-                
-            for (int num = 0; num < 5; num++)
-            {
-                Console.WriteLine(numList2[num]);
-            }
+            
             throw new NotImplementedException();
+            return numeros.OrderByDescending(x => x).Take(5).ToList();
         }
     }
 }

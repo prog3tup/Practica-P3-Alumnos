@@ -16,7 +16,7 @@ namespace PracticaLinq
             integers.Add(153);
             integers.Add(15);
 
-            var result = integers.Select(x => x <=100 && x > 30).ToList();
+            var result = integers.Where(x => x <=100 && x > 30).ToList();
 
             foreach (var integer in result)
             {

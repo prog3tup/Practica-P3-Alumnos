@@ -2,7 +2,7 @@
 {
 /*Escriba una consulta que devuelva las palabras que empiezan por la letra "b" y terminan con la letra "r".
 Ejemplo: "ventilador", "reloj", "buscador" → "buscador"
-*
+*/
     public class Ej3
     {
         public Ej3()
@@ -14,9 +14,9 @@ Ejemplo: "ventilador", "reloj", "buscador" → "buscador"
             list.Add("sarasa");
             list.Add("bokee");
 
-            List<string>? listNew = new List<string>();
+           var newList = list.Where(x => x.StartsWith('b') && x.EndsWith('r')).ToList();
 
-            foreach (var item in listaNueva)
+            foreach (var item in newList)
             {
                 Console.WriteLine(item);
             }
@@ -24,8 +24,8 @@ Ejemplo: "ventilador", "reloj", "buscador" → "buscador"
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
             throw new NotImplementedException();
+            return palabras.Where(x => x.StartsWith('b') && x.EndsWith('r')).ToList();
         }
     }
 }
-*/
 }

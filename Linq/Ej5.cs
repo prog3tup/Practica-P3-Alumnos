@@ -10,26 +10,28 @@ namespace PracticaLinq
         {
             List<double> numList = new List<double>();
 
-            numList.Add(2);
+            numList.Add(7);
             numList.Add(0);
             numList.Add(3);
             numList.Add(21);
             numList.Add(7);
-            numList.Add(5);
 
-            var newList = Math.Pow(numList, 2).toList();
-            
-            foreach (var num in newList)
+            var numList2 = numList.Where(x => Math.Pow(x, 2) >= 20).ToArray();
+            var sarasa = numList2.Select($"{numList2} - {Math.Pow(numList2, 2)}".ToList());
+           
+            foreach (double jaja in sarasa)
             {
-                if( num >= 20){
-                Console.WriteLine(numList[num] + newList[num]);
-                }
+
+                Console.WriteLine(jaja);
+
             }
         }
 
         public static List<string> CalcularCuadrados(int[] numeros)
         {
             throw new NotImplementedException();
+            numeros = numeros.Where(x => Math.Pow(x, 2) >= 20).ToArray();
+            return numeros.Select($"{numeros} - { Math.Pow(numeros, 2)}".ToList());
         }
     }
 }
