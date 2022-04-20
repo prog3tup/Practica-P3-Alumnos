@@ -7,8 +7,11 @@
             List<string> list = new List<string>();
             list.Add("computadora");
             list.Add("usb");
+            list.Add("bartender");
+            list.Add("buscador");
 
-            List<string>? listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            var listaNueva = BuscarPalabrasPorLetras(list);
+
 
             foreach (var item in listaNueva)
             {
@@ -17,7 +20,7 @@
         }
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
-            throw new NotImplementedException();
+            return palabras.Where(item => item.StartsWith("b") && item.EndsWith("r")).ToList();
         }
     }
 }
