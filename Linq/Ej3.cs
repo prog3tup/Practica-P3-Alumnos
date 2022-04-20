@@ -5,19 +5,18 @@
         public Ej3()
         {
             List<string> list = new List<string>();
-            list.Add("computadora");
-            list.Add("usb");
+            list.Add("ventilador");
+            list.Add("reloj");
+            list.Add("buscador");
 
-            List<string>? listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            var result = BuscarPalabrasPorLetras(list);
 
-            foreach (var item in listaNueva)
-            {
-                Console.WriteLine(item);
-            }
+            result.ForEach(Console.WriteLine);
+            
         }
-        public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
+        public static List<string> BuscarPalabrasPorLetras(List<string> words)
         {
-            throw new NotImplementedException();
+            return words.Where(word => word.StartsWith('b')  && word.EndsWith('r')).ToList();
         }
     }
 }
