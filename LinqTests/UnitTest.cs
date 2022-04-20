@@ -27,7 +27,7 @@ namespace LinqTests
         [Test]
         public void Ej3Test()
         {
-            var palabras = new List<string>() { "ventilador", "reloj", "buscador" , "bajo"};
+            var palabras = new List<string>() { "ventilador", "reloj", "buscador"};
 
             List<string> nuevasPalabras = Ej3.BuscarPalabrasPorLetras(palabras);
 
