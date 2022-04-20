@@ -4,12 +4,18 @@
     {
         public Ej5()
         {
+            int [] array = new int[] { 7, 2, 30 };
 
+            var resultado = CalcularCuadrados(array);
+
+            resultado.ToList().ForEach(Console.WriteLine);
         }
 
-        public static List<string> CalcularCuadrados(int[] numeros)
+        public static List<string> CalcularCuadrados(int[] numbers)
         {
-            throw new NotImplementedException();
+            List<int> listInt = numbers.Where(num => (num * num) > 20).ToList();
+
+            return listInt.Select(num => num.ToString() + " - " + (num * num).ToString()).ToList();
         }
     }
 }
