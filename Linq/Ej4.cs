@@ -21,26 +21,14 @@ namespace PracticaLinq
 
             List<int>? listaNueva = list.Where(numero => numero > 0).ToList();
 
-            List<int>? listaOrdenada = listaNueva.OrderByDescending(numero => numero).ToList();
+            List<int>? listaOrdenada = listaNueva.OrderByDescending(numero => numero).Take(5).ToList();
 
-            List<int> listaFinal = new List<int>();
-
-            for (int i = 0; i < 5; i++)
-            {
-                listaFinal.Add(listaOrdenada[i]);
-            }
             
-            foreach(int numero in listaFinal) { Console.WriteLine(numero); }
+            foreach(int numero in listaOrdenada) { Console.WriteLine(numero); }
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            List<int>? listaOrdenada = numeros.OrderByDescending(numero => numero).ToList();
-            List<int> listaFinal = new List<int>();
-            for (int i = 0; i < 5; i++)
-            {
-                listaFinal.Add(listaOrdenada[i]);
-            }
-            return listaFinal;
+            return numeros.OrderByDescending(numero => numero).Take(5).ToList();
         }
     }
 }

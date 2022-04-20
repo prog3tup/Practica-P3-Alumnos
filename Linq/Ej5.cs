@@ -30,12 +30,7 @@ namespace PracticaLinq
         public static List<string> CalcularCuadrados(int[] numeros)
         {
             List<int> listNumerosValidos = numeros.Where(num => num * num > 20).ToList();
-            List<string> listaFinal = new List<string>();
-
-            foreach (int num in listNumerosValidos)
-            {
-                listaFinal.Add($"{num} - {num * num}");
-            }
+            List<string> listaFinal = listNumerosValidos.Select(numero => $"{numero} - {numero * numero}").ToList();
 
             return listaFinal;
         }
