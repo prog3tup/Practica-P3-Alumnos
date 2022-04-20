@@ -11,12 +11,17 @@
             foreach (var pal in lista)
             {
                 Console.WriteLine(pal);
-            }       
-        }    
-        
+            }
+        }
+
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            throw new NotImplementedException();
+            var uppercaseWord =  cadena.Split(' ')
+						.Where(x => String.Equals(x, x.ToUpper(),
+                        StringComparison.Ordinal)).ToList();
+
+			return uppercaseWord;
+            //throw new NotImplementedException();
         }
     }
 }
