@@ -8,7 +8,9 @@
         }
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
-            throw new NotImplementedException();
+            List <string> palabrasBR = palabras.Where(palabra => palabra.StartsWith("b") && palabra.EndsWith("r")).ToList();
+
+            return palabrasBR;
         }
     }
 }
