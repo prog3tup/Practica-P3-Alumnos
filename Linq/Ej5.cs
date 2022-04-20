@@ -16,8 +16,7 @@ namespace PracticaLinq
 
         public static List<string> CalcularCuadrados(int[] numeros)
         {
-            List<int> listInt = numeros.ToList().Where(x => (x * x) > 20).ToList();
-            return listInt.Select(x => x.ToString() + " - " + (x * x).ToString()).ToList();
+            return numeros.Where(x => (x * x) > 20).Select(x => x.ToString() + " - " + (x * x).ToString()).ToList();
         }
     }
 }

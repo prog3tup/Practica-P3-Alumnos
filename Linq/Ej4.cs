@@ -15,7 +15,7 @@ namespace PracticaLinq
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            return numeros.ToList().OrderByDescending(x => x).ToList().Take(5).ToList();
+            return numeros.OrderByDescending(x => x).Take(5).ToList();
         }
     }
 }
