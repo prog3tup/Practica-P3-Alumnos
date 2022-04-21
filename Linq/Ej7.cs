@@ -15,10 +15,7 @@ namespace PracticaLinq
 
             var lista = DevolverPalabrasCapitales(cadena);
 
-            foreach (var pal in lista)
-            {
-                Console.WriteLine(pal);
-            }       
+            lista.ToList().ForEach(Console.WriteLine);
         }    
         
         public static IList<string> DevolverPalabrasCapitales(string cadena)

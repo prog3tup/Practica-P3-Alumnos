@@ -12,10 +12,12 @@ namespace PracticaLinq
             {
                 List<string> list = new List<string>();
                 list.Add("destornillador");
-                list.Add("cuadro");
+                list.Add("buscador");
                 list.Add("borrador");
                 var result = BuscarPalabrasPorLetras(list);
                 result.ForEach(Console.WriteLine);
+
+
             }
             public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
             {

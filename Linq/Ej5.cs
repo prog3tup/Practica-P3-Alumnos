@@ -6,7 +6,7 @@
         {
             int[] array = new int[] { 7, 2, 30 };
             List<string> result = CalcularCuadrados(array);
-            result.ForEach(Console.WriteLine);
+            result.ToList().ForEach(Console.WriteLine);
         }
 
         public static List<string> CalcularCuadrados(int[] numbers)

@@ -11,7 +11,7 @@ namespace PracticaLinq
         {
             int[] array = new int[] { 78, -9, 0, 23, 54, 21, 7, 86 };
             List<int> result = PrimerosDescendiente(array);
-            result.ForEach(Console.WriteLine);
+            result.ToList().ForEach(Console.WriteLine);
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
