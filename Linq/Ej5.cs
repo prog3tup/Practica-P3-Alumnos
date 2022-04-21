@@ -8,19 +8,19 @@ namespace PracticaLinq
     {
         public Ej5()
         {
-            List<int> enteros = new List<int>();
-            enteros.Add(7);
-            enteros.Add(2);
-            enteros.Add(30);
+            List<int> numeros = new List<int>();
+            numeros.Add(7);
+            numeros.Add(2);
+            numeros.Add(30);
 
-            var resultado = enteros.Where(x => x * x > 20).Select(x => $"{x} - {x * x}").ToList();
+            
 
         }
        
 
         public static List<string> CalcularCuadrados(int[] numeros)
         {
-            throw new NotImplementedException();
+            return numeros.Where(x => x * x > 20).Select(x => $"{x} - {x * x}").ToList();
         }
     }
 }

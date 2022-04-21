@@ -18,13 +18,14 @@ namespace PracticaLinq
             enteros.Add(7);
             enteros.Add(86);
 
-            var resultado = enteros.Select(x => x).Take(5).OrderByDescending(x => x).ToList();
+
 
                 
         }
-        public static List<int> PrimerosDescendiente(int[] numeros)
+        public static List<int> PrimerosDescendiente(int[] enteros)
         {
-            throw new NotImplementedException();
+            
+            return enteros.OrderByDescending(x => x).Take(5).ToList();
         }
     }
 }

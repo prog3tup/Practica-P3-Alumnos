@@ -13,11 +13,10 @@ namespace PracticaLinq
             list.Add("caminar");
             list.Add("dia");
 
-            var listaNueva = list.Select(palabra => palabra.Replace("ia","*")).ToList();
         }
         public static IList<string> ReemplazarIa(List<string> palabras)
         {
-            throw new NotImplementedException();
+            return palabras.Select(palabra => palabra.Replace("ia", "*")).ToList();
         }
     }
 }

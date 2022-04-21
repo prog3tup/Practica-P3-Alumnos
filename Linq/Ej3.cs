@@ -13,12 +13,11 @@ namespace PracticaLinq
             list.Add("reloj");
             list.Add("buscador");
 
-            List<string>? listaNueva = list.Where(palabra => palabra.StartsWith('b') && palabra.EndsWith('r')).ToList();
 
         }
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
-            throw new NotImplementedException();
+            return palabras.Where(palabra => palabra.StartsWith('b') && palabra.EndsWith('r')).ToList();
         }
     }
 }
