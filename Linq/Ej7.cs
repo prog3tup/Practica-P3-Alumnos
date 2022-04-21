@@ -15,12 +15,13 @@ namespace PracticaLinq
 
             var lista = DevolverPalabrasCapitales(cadena);
 
+
             lista.ToList().ForEach(Console.WriteLine);
         }    
         
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            return cadena.Split(' ').Where(item => item.ToUpper() == item).ToList();
+            return cadena.Split(' ').Where(anItem => anItem.ToUpper() == anItem).ToList();
         }
     }
 }
