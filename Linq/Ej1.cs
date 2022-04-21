@@ -16,7 +16,11 @@ namespace PracticaLinq
             enteros.Add(153);
             enteros.Add(15);
 
+<<<<<<< HEAD
             var resultado = enteros.Where(x => x > 30 && x < 100).ToList();
+=======
+            var resultado = enteros.Select(x => x + 100).ToList();
+>>>>>>> b4470cbe6d104f575a8d92bcf26a5facd6b32171
 
             foreach (var entero in resultado)
             {
