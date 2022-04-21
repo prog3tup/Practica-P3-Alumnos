@@ -5,10 +5,11 @@
         public Ej3()
         {
             List<string> list = new List<string>();
-            list.Add("computadora");
-            list.Add("usb");
+            list.Add("ventilador");
+            list.Add("reloj");
+            list.Add("buscador");
 
-            List<string>? listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            var listaNueva = list.Where(x => x.StartsWith('b') && x.EndsWith('r')).ToList();
 
             foreach (var item in listaNueva)
             {
@@ -21,3 +22,7 @@
         }
     }
 }
+
+/*3) Escriba una consulta que devuelva las palabras que empiezan por la letra "b" y terminan con la letra "r".
+Ejemplo: "ventilador", "reloj", "buscador" → "buscador"*/
+
