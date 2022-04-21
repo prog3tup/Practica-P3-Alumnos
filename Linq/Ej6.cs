@@ -9,7 +9,8 @@
             list.Add("caminar");
             list.Add("dia");
 
-            var newList = ReemplazarIa(list);
+            var newList = list.Select(x => x.Replace("ia", "*")).ToList();
+
             foreach (var n in newList)
             {
                 list.Add(n);

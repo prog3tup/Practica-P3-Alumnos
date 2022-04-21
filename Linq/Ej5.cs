@@ -4,19 +4,27 @@
     {
         public Ej5()
         {
-            int[] list = new int[] { 7, 2, 30 };
-            List<string> listaCuadrados = CalcularCuadrados(list);
+        public Ej5()
+        {
+            List<int> list = new List<int>();
+            list.Add(7);
+            list.Add(2);
+            list.Add(30);
 
-            foreach (var n in listaCuadrados)
+            var cuadrados = list.Where(x => x * x > 20).Select(x => $" {x} - {x * x}").ToList();
+
+            foreach (var n in cuadrados)
             {
-                Console.WriteLine(n);   
+                Console.WriteLine(n);
             }
+
+
         }
+
 
         public static List<string> CalcularCuadrados(int[] numeros)
         {
-            nros = nros.Where(n => Math.Pow(n, 2) > 20).ToArray();
-            return nros.Select(n => $"{n} - {Math.Pow(n, 2)}").ToList();
+            return numeros.Where(x => x * x > 20).Select(x => $" {x} - {x * x}").ToList();
         }
     }
 }

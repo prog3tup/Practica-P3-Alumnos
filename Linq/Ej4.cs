@@ -1,13 +1,23 @@
 ﻿namespace PracticaLinq
 {
     public class Ej4
-    {
-        public Ej4()
-        {
-            int[] list = new int[] { 78, -9, 0, 23, 54, 21, 7, 86 };
-            List<int> nroEntero = PrimerosDescendiente(list);
+      {
+            List<int> list = new List<int>();
+            list.Add(78);
+            list.Add(-9);
+            list.Add(0);
+            list.Add(23);
+            list.Add(54);
+            list.Add(21);
+            list.Add(7);
+            list.Add(86);
 
-            foreach (var n in nroEntero)
+           
+            var asd = list.Take(5).OrderByDescending(x => x).ToList();
+
+
+
+            foreach (var n in asd)
             {
                 Console.WriteLine(n);
             }
@@ -15,7 +25,8 @@
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            return numeros.OrderByDescending(x => x).ToList();
+            return numeros.Take(5).OrderByDescending(x => x).ToList();
+
         }
     }
 }
