@@ -26,7 +26,7 @@ namespace PracticaLinq
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
             string[] subs = cadena.Split(' ');
-            return subs.Where(pal => pal != pal.ToLower() && pal == pal.ToUpper()).ToList();
+            return subs.Where(pal => pal == pal.ToUpper()).ToList();
 
         }
     }
