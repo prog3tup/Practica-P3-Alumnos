@@ -12,7 +12,7 @@
 
             foreach (var i in final_list)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(item);
             }
         }
     }

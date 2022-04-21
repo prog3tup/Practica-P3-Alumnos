@@ -10,7 +10,7 @@
             number_list.Add(153);
             number_list.Add(15);
 
-            var result = number_list.Where(n => n <=100 && n > 30).ToList();
+            var result = number_list.Where(n => n <=100 && x > 30).ToList();
 
             foreach (var number_list in result)
             {
