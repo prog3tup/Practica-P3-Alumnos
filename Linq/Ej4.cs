@@ -8,7 +8,14 @@
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            throw new NotImplementedException();
+            List<int> numerosDescendentes = numeros.OrderByDescending(n => n).ToList();
+            List<int> primerosCinco = new();
+            for (int i = 0; i < 4; i++)
+            {
+                primerosCinco.Add(numerosDescendentes[i]);
+            }
+
+            return  primerosCinco;
         }
     }
 }
