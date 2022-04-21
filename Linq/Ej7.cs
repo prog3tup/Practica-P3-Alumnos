@@ -16,7 +16,8 @@
         
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            throw new NotImplementedException();
-        }
+            
+            return cadena.Split(' ').ToList().Where(x => x.ToUpper() == x).ToList();
+      
     }
 }
