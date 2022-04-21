@@ -12,13 +12,13 @@ namespace PracticaLinq
         {
             List<string> list = new List<string>();
             list.Add("computadora");
+            list.Add("carro");
             list.Add("usb");
 
             var listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
-
             foreach (var item in listaNueva)
             {
-                Console.WriteLine(item);
+                //Console.WriteLine(item);
             }
         }
     }
