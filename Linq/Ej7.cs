@@ -1,4 +1,13 @@
-﻿namespace PracticaLinq
+﻿/*
+ 7) Implementar la función 
+
+public static IList<string> DevolverPalabrasCapitales(string cadena)
+
+que devuelva sólo las palabras en mayúsculas de la cadena.
+Ejemplo: "ESTO es un EJEMPLO del EJERcicio" → ESTO, EJEMPLO
+*/
+
+namespace PracticaLinq
 {
     public class Ej7
     {
@@ -16,7 +25,10 @@
         
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            throw new NotImplementedException();
+            char [] arr1 = cadena.ToCharArray();
+            char [] arr2 = cadena.ToLower().ToCharArray();
+            return arr1.Where(x => arr2.Contains(x)).ToList().ToString();
+
         }
     }
 }
