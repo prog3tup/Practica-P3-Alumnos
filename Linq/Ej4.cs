@@ -29,7 +29,7 @@ namespace PracticaLinq
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
             
-            throw new NotImplementedException();
+            
             return numeros.OrderByDescending(x => x).Take(5).ToList();
         }
     }

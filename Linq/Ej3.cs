@@ -23,9 +23,8 @@ Ejemplo: "ventilador", "reloj", "buscador" → "buscador"
         }
         public static List<string> BuscarPalabrasPorLetras(List<string> palabras)
         {
-            throw new NotImplementedException();
+
             return palabras.Where(x => x.StartsWith('b') && x.EndsWith('r')).ToList();
         }
     }
-}
 }

@@ -21,10 +21,12 @@
                 Console.WriteLine(word);
 
             }
-        public static IList<string> ReemplazarIa(List<string> palabras)
-        {
-            throw new NotImplementedException();
-            return palabras.Select(x => x.Replace('ia', '*')).ToList();
+        }
+            public static IList<string> ReemplazarIa(List<string> palabras)
+            {
+
+                return palabras.Select(x => x.Replace("ia", "*")).ToList();
             }
+        
     }
 }

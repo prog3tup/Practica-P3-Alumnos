@@ -24,8 +24,8 @@ Ejemplo: "ESTO es un EJEMPLO del EJERcicio" → ESTO, EJEMPLO
         
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            throw new NotImplementedException();
-            return cadena.Where(word => word.ToUpper == word).Tolist();
+            
+            return cadena.Split(" ").ToList().Where(word => word.ToUpper() == word).ToList();
         }
     }
 }

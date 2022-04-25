@@ -6,7 +6,7 @@ namespace PracticaLinq
 {
     public class Ej5
     {
-        public Ej5()
+        public Ej5(double[] numList2)
         {
             List<double> numList = new List<double>();
 
@@ -16,8 +16,8 @@ namespace PracticaLinq
             numList.Add(21);
             numList.Add(7);
 
-            var numList2 = numList.Where(x => Math.Pow(x, 2) >= 20).ToArray();
-            var sarasa = numList2.Select($"{numList2} - {Math.Pow(numList2, 2)}".ToList());
+            /*var numList2 = numList.Where(x => Math.Pow(x, 2) >= 20).ToArray();
+            /var sarasa = numList2.Select($"{numList2} - {Math.Pow(numList2, 2)}".ToList());
            
             foreach (double jaja in sarasa)
             {
@@ -25,11 +25,13 @@ namespace PracticaLinq
                 Console.WriteLine(jaja);
 
             }
+        
+            */
         }
 
-        public static List<string> CalcularCuadrados(int[] numeros)
+        public static List<string> CalcularCuadrados(double[] numeros)
         {
-            throw new NotImplementedException();
+            
             numeros = numeros.Where(x => Math.Pow(x, 2) >= 20).ToArray();
             return numeros.Select($"{numeros} - { Math.Pow(numeros, 2)}".ToList());
         }
