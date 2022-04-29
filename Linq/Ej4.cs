@@ -18,7 +18,7 @@ namespace PracticaLinq
             list.Add(86);
 
            
-            var asd = list.Take(5).OrderByDescending(x => x).ToList();
+            var asd = list.OrderByDescending(x => x).Take(5).ToList();
 
 
 
@@ -30,7 +30,7 @@ namespace PracticaLinq
         }
         public static List<int> PrimerosDescendiente(int[] numeros)
         {
-            return numeros.Take(5).OrderByDescending(x => x).ToList();
+            return numeros.OrderByDescending(x => x).Take(5).ToList();
 
         }
     }
