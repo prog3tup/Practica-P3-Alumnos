@@ -18,18 +18,7 @@
         {
             IList<string> listaCadena = cadena.Split(" ").ToList();
             IList<string> listaMayuscula = new List<string>();
-            bool result = true;
-            foreach (var pal in listaCadena)
-            {
-                for (int i = 0; i < pal.Length; i++)
-                {
-                    result = Char.IsUpper(pal,i);
-                    if (result is false)
-                        break;
-                }
-                if (result) 
-                    listaMayuscula.Add(pal);
-            }
+            listaMayuscula = listaCadena.Where(cadena => cadena.ToUpper() == cadena).ToList();
             return listaMayuscula;
         }
     }

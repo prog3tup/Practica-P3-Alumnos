@@ -17,11 +17,7 @@
         {
             Array.Sort(numeros);
             Array.Reverse(numeros);
-            var primeros5 = new List<int>();
-
-            for (int i = 0; i < 5; i++) {
-                primeros5.Add(numeros[i]);
-            }
+            List<int>? primeros5 = numeros.Take(5).ToList();
             return primeros5;
         }
     }
