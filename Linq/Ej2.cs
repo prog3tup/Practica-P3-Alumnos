@@ -10,16 +10,16 @@ namespace PracticaLinq
     {
         public Ej2()
         {
-            List<string> list = new List<string>();
-            list.Add("computadora");
-            list.Add("usb");
 
-            var listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            var listEj = new List<string>() { "usb", "computadora", "mouse", "mic", "teclado" };
 
-            foreach (var item in listaNueva)
+            var filterList = listEj.Where(word => word.Length >= 5);
+
+            foreach (var item in filterList)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.ToUpper());
             }
+
         }
     }
 }

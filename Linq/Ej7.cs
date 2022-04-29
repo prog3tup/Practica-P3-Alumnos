@@ -4,7 +4,7 @@
     {
         public Ej7()
         {
-            var cadena = "ESTO es un EJEMPLO del EJERcicio";
+            var cadena = "ESTO es un EJEMPLO deL EJERcicio";
 
             var lista = DevolverPalabrasCapitales(cadena);
 
@@ -16,7 +16,10 @@
         
         public static IList<string> DevolverPalabrasCapitales(string cadena)
         {
-            throw new NotImplementedException();
+            IList<string> listaCadena = cadena.Split(" ").ToList();
+            IList<string> listaMayuscula = new List<string>();
+            listaMayuscula = listaCadena.Where(cadena => cadena.ToUpper() == cadena).ToList();
+            return listaMayuscula;
         }
     }
 }

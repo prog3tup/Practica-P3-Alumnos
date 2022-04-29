@@ -10,19 +10,16 @@ namespace PracticaLinq
     {
         public Ej1()
         {
-            List<int> enteros = new List<int>();
-            enteros.Add(67);
-            enteros.Add(92);
-            enteros.Add(153);
-            enteros.Add(15);
 
-            var resultado = enteros.Select(x => x + 100).ToList();
+            var listEj = new List<int>() { 67, 92, 153, 15 };
 
-            foreach (var entero in resultado)
+            var filterList = listEj.Where(n => n > 30 && n < 100);
+
+            foreach (var item in filterList)
             {
-                Console.WriteLine(entero);
+                Console.WriteLine(item);
             }
-        }
 
-    }
+        }
+}
 }
