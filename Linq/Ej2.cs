@@ -1,24 +1,19 @@
-﻿
-/*
- 2) Escriba una consulta que devuelva palabras de al menos 5 caracteres y las ponga en mayúsculas. 
-Ejemplo: "computadora", "usb" → "COMPUTADORA"
-
- */
-namespace PracticaLinq
+﻿namespace PracticaLinq
 {
-    public class Ej2
+    internal class Ej2
     {
         public Ej2()
         {
-            List<string> list = new List<string>();
-            list.Add("computadora");
-            list.Add("usb");
-
-            var listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
-
-            foreach (var item in listaNueva)
+            List<string> palabras = new()
             {
-                Console.WriteLine(item);
+                "computadora",
+                "usb"
+            };
+            List<string> consulta = palabras.Where(palabra => palabra.Length >= 5).ToList();
+
+            foreach (var palabra in consulta)
+            {
+                Console.WriteLine(palabra.ToUpper());
             }
         }
     }
