@@ -14,9 +14,9 @@ namespace PracticaLinq
             list.Add("computadora");
             list.Add("usb");
 
-            var listaNueva = list.Where(palabra => palabra.Length >= 5).Select(palabra => palabra.ToUpper()).ToList();
+            var newList = list.Where(word => word.Length >= 5).Select(word => word.ToUpper()).ToList();
 
-            foreach (var item in listaNueva)
+            foreach (var item in newList)
             {
                 Console.WriteLine(item);
             }

@@ -10,17 +10,17 @@ namespace PracticaLinq
     {
         public Ej1()
         {
-            List<int> enteros = new List<int>();
-            enteros.Add(67);
-            enteros.Add(92);
-            enteros.Add(153);
-            enteros.Add(15);
+            List<int> integers = new List<int>();
+            integers.Add(67);
+            integers.Add(92);
+            integers.Add(153);
+            integers.Add(15);
 
-            var resultado = enteros.Select(x => x + 100).ToList();
+            var result = integers.Where(x => x <=100 && x > 30).ToList();
 
-            foreach (var entero in resultado)
+            foreach (var integer in result)
             {
-                Console.WriteLine(entero);
+                Console.WriteLine(integer);
             }
         }
 
