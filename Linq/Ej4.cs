@@ -22,7 +22,8 @@ namespace PracticaLinq
         }
         public static List<int> PrimerosDescendiente(int[] enteros)
         {
-            return enteros.Where(x => x >= enteros[4]).ToList();
+            List<int>? primerosCinco = enteros.OrderByDescending(x => x).ToList();
+            return primerosCinco.Where(x => x >= primerosCinco[4]).ToList();
         }
     }
 }
